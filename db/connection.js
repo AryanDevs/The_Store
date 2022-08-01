@@ -1,5 +1,6 @@
+require('dotenv').config({path:'../config/.env'})
 const mongoose=require('mongoose')
-mongoose.connect("mongodb+srv://aryan:lcostore@cluster0.eqfekyl.mongodb.net/thestore?retryWrites=true&w=majority",{
+mongoose.connect(process.env.MONGODB_URL,{
     useNewUrlParser:true,
     useUnifiedTopology:true
 })
